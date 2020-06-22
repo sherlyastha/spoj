@@ -1,0 +1,29 @@
+#include<bits/stdc++.h> 
+#include<cmath>
+#include<boost/multiprecision/cpp_int.hpp>
+#include<string>
+#define ll long long 
+using boost::multiprecision::cpp_int;
+using namespace std;
+cpp_int recur( ll n)
+{
+	if (n==1)
+		return 1;
+	else
+		return n*recur(n-1);
+}
+
+int main()
+{
+	ll t;
+	cin>>t;
+	while(t--)
+	{
+		ll n;
+		cin>>n;
+		cpp_int r=recur(n);
+		cout<<r<<endl;
+
+	}
+	return 0;
+}
